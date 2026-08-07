@@ -1,2 +1,3 @@
 # Linear_Regresstion
-Supervised model 
+Supervised regression model
+
