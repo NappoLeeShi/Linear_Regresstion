@@ -14,7 +14,7 @@ class OLS:
         n = X.shape[0]
         X_b = np.c_[np.ones((n, 1)), X]
 
-        self.coefficients = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
+        self.coefficients = np.linalg.pinv(X_b.T.dot(X_b)).dot(X_b.T).dot(y)
         self.intercept = self.coefficients[0]
 
         self.y_pred = np.dot(X_b, self.coefficients)
